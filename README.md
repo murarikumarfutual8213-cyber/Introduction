@@ -1,4 +1,2 @@
-# Introduction
-Hi, I’m Murari Singh 👋  
-Diploma Computer Science student learning Web Development, Linux, and Cloud Computing.  
-I use GitHub to practice coding and build projects.
+#Introduction
+https://github.com/murarikumarfutual8213-cyber/Introduction.git
