@@ -2,72 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Introduction</title>
+<title>Murari Singh | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #0f172a;
     color: white;
-    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 80px 20px;
     text-align: center;
-    padding-top: 120px;
 }
 
-/* Typing heading */
-h1 {
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.hero h1 {
     font-size: 40px;
-    min-height: 50px;
 }
 
-/* Paragraph animation */
-p {
+.hero p {
     font-size: 20px;
     opacity: 0;
-    animation: slideUp 2s ease-in-out forwards;
-}
-
-p:nth-child(2) {
+    animation: fadeUp 2s forwards;
     animation-delay: 1.5s;
 }
 
-p:nth-child(3) {
-    animation-delay: 2.2s;
+.skills span {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #1e293b;
 }
 
-/* Animations */
-@keyframes slideUp {
-    from {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.project {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+footer {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
 
 <body>
 
-<h1 id="typing"></h1>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 id="typing"></h1>
+    <p>Diploma Computer Science Student | Web & Cloud Learner</p>
+</section>
 
-<p>Diploma Computer Science Student</p>
-<p>Learning Web Development & Cloud Computing</p>
+<!-- ABOUT -->
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am Murari Singh, a Diploma Computer Science student.
+        I am learning Web Development, Linux, and Cloud Computing.
+        I enjoy building projects and improving my practical skills.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
+    <h2>Skills</h2>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Linux</span>
+    <span>Git & GitHub</span>
+    <span>Cloud Basics</span>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h2>Projects</h2>
+    <div class="project">Animated Introduction Website</div>
+    <div class="project">Linux Command Practice</div>
+    <div class="project">Basic Web Pages</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact</h2>
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: murarikumarfutual8213</p>
+</section>
+
+<footer>
+    © 2026 Murari Singh
+</footer>
 
 <script>
 let text = "Hello, I am Murari Singh 👋";
 let i = 0;
-
-function typingEffect() {
+function typing() {
     if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i);
         i++;
-        setTimeout(typingEffect, 100);
+        setTimeout(typing, 100);
     }
 }
-
-typingEffect();
+typing();
 </script>
 
 </body>
