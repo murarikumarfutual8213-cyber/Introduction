@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Introduction</title>
+
+<style>
+body {
+    background: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 120px;
+}
+
+/* Typing heading */
+h1 {
+    font-size: 40px;
+    min-height: 50px;
+}
+
+/* Paragraph animation */
+p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideUp 2s ease-in-out forwards;
+}
+
+p:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+p:nth-child(3) {
+    animation-delay: 2.2s;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="typing"></h1>
+
+<p>Diploma Computer Science Student</p>
+<p>Learning Web Development & Cloud Computing</p>
+
+<script>
+let text = "Hello, I am Murari Singh 👋";
+let i = 0;
+
+function typingEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 100);
+    }
+}
+
+typingEffect();
+</script>
+
+</body>
+</html>
